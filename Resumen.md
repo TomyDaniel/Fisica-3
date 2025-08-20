@@ -239,3 +239,112 @@ Donde $h$ es la constante de Planck $ 6.626 \times 10^{-34} \text { J s} $
 | **Velocidad**          | Depende del medio (ej. ~343 m/s en aire)        | Constante en el vacío ($c \approx 3 \times 10^8$ m/s) |
 | **Fenómeno físico**    | Compresión y rarefacción de partículas          | Oscilación de campos eléctricos y magnéticos      |
 | **Polarización**       | No es posible (por ser longitudinal)            | Es posible (por ser transversal)                  |
+
+---
+
+---
+
+## Interferencia y Difracción de la Luz
+
+Estos fenómenos son la evidencia más fuerte del comportamiento ondulatorio de la luz y son una consecuencia directa del principio de superposición.
+
+### Interferencia por Doble Rendija (Experimento de Young)
+
+Este experimento demuestra que la luz puede interferir consigo misma. Cuando una onda de luz monocromática (una sola longitud de onda, $\lambda$) pasa a través de dos rendijas muy estrechas y cercanas, las rendijas actúan como dos fuentes de ondas coherentes. Estas ondas se superponen y crean un patrón de franjas brillantes y oscuras en una pantalla lejana.
+
+La condición para que ocurra interferencia constructiva o destructiva en un punto P de la pantalla depende de la **diferencia de camino** ($\delta$) recorrido por las ondas desde cada rendija hasta P.
+
+Si *d* es la distancia entre las rendijas y $\theta$ es el ángulo al punto P:
+-   **Diferencia de camino:** $\delta = d \cdot sen(\theta)$
+
+Las condiciones son:
+-   **Interferencia Constructiva (Franjas Brillantes / Máximos):** La diferencia de camino es un múltiplo entero de la longitud de onda.
+    $$ d \cdot sen(\theta) = m \cdot \lambda \quad (m = 0, \pm 1, \pm 2, ...) $$
+-   **Interferencia Destructiva (Franjas Oscuras / Mínimos):** La diferencia de camino es un múltiplo semientero de la longitud de onda.
+    $$ d \cdot sen(\theta) = \left(m + \frac{1}{2}\right) \cdot \lambda \quad (m = 0, \pm 1, \pm 2, ...) $$
+Donde *m* se conoce como el **orden** de la franja.
+
+![alt text](img\DobleRendija.png)
+
+### Difracción por una Sola Rendija
+
+Cuando una onda pasa a través de una abertura o rodea un obstáculo, se extiende o "dobla". Este fenómeno se llama difracción. Es, en esencia, la interferencia de las infinitas ondas puntuales (principio de Huygens) que atraviesan la abertura.
+
+Para una sola rendija de ancho *a*, se observa un patrón con un máximo central muy brillante y ancho, flanqueado por máximos secundarios mucho más débiles y mínimos de intensidad cero.
+
+-   **Condición para los Mínimos de Intensidad (Franjas Oscuras):**
+    $$ a \cdot sen(\theta) = m \cdot \lambda \quad (m = \pm 1, \pm 2, \pm 3, ...) $$
+    **Nota importante:** La fórmula es similar a la de los máximos en la doble rendija, pero aquí describe los **mínimos**. El valor $m=0$ se excluye porque corresponde al máximo central.
+
+El resultado (constructivo o destructivo) depende de dos factores:
+1.  **La diferencia de camino óptico:** La onda que se refleja en la superficie inferior viaja una distancia extra. Si el espesor de la película es *e* y su índice de refracción es *n*, la diferencia de camino es aproximadamente $2ne$.
+2.  **El desfase por reflexión:** Ocurre un desfase de media longitud de onda ($\pi$ radianes) si la luz se refleja en la interfaz con un medio de **mayor** índice de refracción.
+
+![alt text](img\RendijaSimple.png)
+
+#### Casos comunes:
+
+**Caso 1: Un solo desfase de $\pi$ en la reflexión**
+(Ej: una película de aceite ($n_{aceite} > n_{aire}$) sobre agua ($n_{aceite} > n_{agua}$)). La reflexión aire-aceite sufre un desfase, pero la reflexión aceite-agua no.
+
+-   **Interferencia Constructiva (Máximo reflejo):**
+    $$ 2ne = \left(m + \frac{1}{2}\right)\lambda $$
+-   **Interferencia Destructiva (Mínimo reflejo / Antirreflectante):**
+    $$ 2ne = m\lambda $$
+
+**Caso 2: Cero o dos desfases de $\pi$ en la reflexión**
+(Ej: una película antirreflectante ($n_{película}$) sobre un lente ($n_{lente}$), con $n_{aire} < n_{película} < n_{lente}$). Ambas reflexiones (aire-película y película-lente) ocurren hacia un medio más denso, causando dos desfases que efectivamente se cancelan entre sí.
+
+-   **Interferencia Constructiva (Máximo reflejo):**
+    $$ 2ne = m\lambda $$
+-   **Interferencia Destructiva (Mínimo reflejo):**
+    $$ 2ne = \left(m + \frac{1}{2}\right)\lambda $$
+
+En ambas situaciones, $m=0, 1, 2, ...$ y $\lambda$ es la longitud de onda en el vacío.
+
+### Interferencia en Películas Delgadas
+
+Este fenómeno es responsable de los colores iridiscentes que se ven en las burbujas de jabón, las manchas de aceite sobre el agua o los recubrimientos antirreflectantes de las lentes. Ocurre por la superposición de las ondas de luz reflejadas en las superficies superior e inferior de una película delgada.
+
+Para analizar la interferencia, debemos considerar **dos factores clave**:
+
+1.  **La diferencia de camino óptico:** La onda que se refleja en la superficie inferior viaja una distancia extra. Si el espesor de la película es *t* y su índice de refracción es *n*, esta diferencia de camino es **2nt**.
+2.  **Los cambios de fase por reflexión:** Este es el factor más importante y modifica las condiciones de interferencia.
+
+> **Regla del Cambio de Fase por Reflexión:**
+> - Cuando una onda de luz que viaja por un medio se refleja en la frontera con un medio de índice de refracción **MAYOR** (pasa de `n_menor` a `n_mayor`), sufre un **cambio de fase de 180° (π radianes)**. Esto equivale a "invertir" la onda, o añadir media longitud de onda ($\lambda/2$) a su recorrido.
+> - Si se refleja en la frontera con un medio de índice de refracción **MENOR** (pasa de `n_mayor` a `n_menor`), **NO hay cambio de fase**.
+
+Analicemos los dos escenarios posibles basados en esta regla.
+
+#### Escenario A: Un solo cambio de fase de 180°
+
+Esto ocurre cuando solo una de las dos reflexiones (la superior o la inferior) invierte la fase.
+*   **Ejemplo típico:** Una película de aceite (`n ≈ 1.5`) sobre agua (`n ≈ 1.33`), rodeada de aire (`n = 1`).
+    -   Reflexión 1 (aire → aceite): Ocurre de `n_menor` a `n_mayor`. **Hay un desfase de 180°**.
+    -   Reflexión 2 (aceite → agua): Ocurre de `n_mayor` a `n_menor`. **No hay desfase**.
+
+Como el desfase de 180° equivale a sumar $\lambda/2$ al camino, las condiciones de interferencia se invierten:
+
+-   **Interferencia Constructiva (Máximo reflejo):** La diferencia de camino `2nt` debe compensar el desfase para que las ondas estén en fase.
+    $$ 2nt = \left(m + \frac{1}{2}\right)\lambda $$
+-   **Interferencia Destructiva (Mínimo reflejo / Antirreflectante):** La diferencia de camino `2nt` debe ser un múltiplo entero para que, sumado al desfase, las ondas estén en oposición.
+    $$ 2nt = m\lambda $$
+
+#### Escenario B: Cero o dos cambios de fase de 180°
+
+Esto ocurre cuando ninguna de las reflexiones invierte la fase, o cuando ambas lo hacen (los dos desfases de 180° se cancelan entre sí).
+*   **Ejemplo típico:** Una capa antirreflectante de MgF₂ (`n ≈ 1.38`) sobre un lente de vidrio (`n ≈ 1.52`), rodeada de aire (`n=1`).
+    -   Reflexión 1 (aire → MgF₂): Ocurre de `n_menor` a `n_mayor`. **Hay un desfase de 180°**.
+    -   Reflexión 2 (MgF₂ → vidrio): También ocurre de `n_menor` a `n_mayor`. **Hay otro desfase de 180°**.
+
+Como los dos desfases se anulan, el resultado depende únicamente de la diferencia de camino óptico `2nt`.
+
+-   **Interferencia Constructiva (Máximo reflejo):**
+    $$ 2nt = m\lambda $$
+-   **Interferencia Destructiva (Mínimo reflejo):**
+    $$ 2nt = \left(m + \frac{1}{2}\right)\lambda $$
+
+En todas las fórmulas, $m = 0, 1, 2, ...$ y $\lambda$ es la longitud de onda de la luz en el vacío.
+
+![alt text](img\PeliculasDelgadas.png)
