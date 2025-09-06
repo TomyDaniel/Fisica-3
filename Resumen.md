@@ -476,3 +476,104 @@ La **Ley de Brewster** relaciona este ángulo con los índices de refracción de
 $$ \tan(\theta_B) = \frac{n_2}{n_1} $$
 
 Esta es la razón por la que las gafas de sol polarizadas son tan efectivas para reducir el deslumbramiento (el "glare"). El deslumbramiento es principalmente luz reflejada en superficies horizontales (carreteras, agua), que está polarizada horizontalmente. Las gafas tienen un eje de transmisión vertical, bloqueando esta luz reflejada según la Ley de Malus ($\theta = 90^\circ$).
+
+---
+
+## Transferencia de Calor y Termodinámica
+
+La termodinámica estudia la energía y sus transformaciones, mientras que la transferencia de calor es la ciencia que se ocupa de la **tasa** a la que se intercambia energía térmica entre sistemas debido a una diferencia de temperatura.
+
+### Conceptos Fundamentales
+
+Para entender la transferencia de calor, es crucial diferenciar entre energía interna, temperatura y calor, conceptos regidos por las leyes de la termodinámica.
+
+1.  **Energía Interna (U):** Es la suma de todas las energías microscópicas de las partículas que componen un sistema (energía cinética de traslación, rotación y vibración, y energía potencial de los enlaces). **Es una propiedad del sistema, una función de estado.** Un sistema "tiene" energía interna.
+
+2.  **Temperatura (T):** Es una medida macroscópica de la energía cinética promedio de las partículas de un sistema. La temperatura es la propiedad que determina la dirección del flujo de calor. Dos sistemas en equilibrio térmico tienen la misma temperatura (**Ley Cero de la Termodinámica**).
+
+3.  **Calor (Q):** Se define como la **energía en tránsito** de un sistema a otro (o entre un sistema y su entorno) debido exclusivamente a una diferencia de temperatura.
+    -   El calor **no es algo que un cuerpo posee**, sino la energía que se transfiere.
+    -   Junto con el trabajo (W), es una de las dos formas de cambiar la energía interna de un sistema cerrado (**Primera Ley de la Termodinámica**: $\Delta U = Q - W$).
+    -   El calor fluye espontáneamente desde el cuerpo de mayor temperatura hacia el de menor temperatura, nunca en la dirección opuesta (**Segunda Ley de la Termodinámica**).
+
+4.  **Estado Estacionario vs. Transitorio:**
+    -   **Estado Estacionario:** Las temperaturas en cada punto del sistema no cambian con el tiempo. La tasa de transferencia de calor (H) es constante.
+    -   **Estado Transitorio:** Las temperaturas en el sistema varían con el tiempo, mientras el sistema evoluciona hacia el equilibrio térmico.
+
+### Mecanismos de Transferencia de Calor
+
+La energía térmica se transfiere a través de tres mecanismos distintos:
+
+#### 1. Conducción
+
+Es la transferencia de calor por contacto directo a nivel molecular, sin transporte de materia. La energía se propaga por colisiones entre partículas adyacentes. Es el mecanismo dominante en los sólidos.
+
+La tasa de transferencia de calor (potencia térmica o corriente de calor, H) se rige por la **Ley de Fourier**:
+
+$$ H = \frac{dQ}{dt} = -k \cdot A \cdot \frac{dT}{dx} $$
+
+-   **k**: **Conductividad térmica** del material (W/m·K), una propiedad que indica su capacidad para conducir calor.
+-   **A**: Área de la sección transversal al flujo.
+-   **dT/dx**: **Gradiente de temperatura**. El signo negativo indica que el calor fluye en la dirección en que la temperatura disminuye.
+
+Para una placa de espesor **L** con caras a temperaturas $T_{caliente}$ y $T_{fría}$, la ley se simplifica a:
+
+$$ H = k \cdot A \cdot \frac{T_{caliente} - T_{fría}}{L} $$
+
+#### 2. Convección
+
+Es la transferencia de calor mediante el movimiento macroscópico de un **fluido** (líquido o gas). El fluido transporta la energía interna de un punto a otro.
+-   **Convección Natural:** El movimiento del fluido se debe a diferencias de densidad causadas por la temperatura (ej. aire caliente que asciende).
+-   **Convección Forzada:** El movimiento es impulsado por un agente externo (ej. un ventilador).
+
+Se modela empíricamente con la **Ley de Enfriamiento de Newton**:
+
+$$ H = h \cdot A \cdot (T_{superficie} - T_{fluido}) $$
+
+-   **h**: **Coeficiente de convección**. No es una propiedad del material, sino que depende de la geometría, la velocidad del fluido y sus propiedades térmicas.
+
+#### 3. Radiación
+
+Es la transferencia de calor mediante **ondas electromagnéticas** (principalmente infrarrojas). No requiere un medio material y puede ocurrir en el vacío. Es el mecanismo por el cual el Sol calienta la Tierra.
+
+La potencia radiada por una superficie se describe por la **Ley de Stefan-Boltzmann**:
+
+$$ P_{emitida} = \epsilon \cdot \sigma \cdot A \cdot T^4 $$
+
+-   **ε**: **Emisividad** de la superficie (0 ≤ ε ≤ 1), indica su eficiencia como emisor de radiación. Un cuerpo negro ideal tiene ε=1.
+-   **σ**: Constante de Stefan-Boltzmann ($5.67 \times 10^{-8} \text{ W/m}^2\text{K}^4$).
+-   **T**: Temperatura **absoluta** de la superficie (en Kelvin).
+
+La **tasa neta** de transferencia de calor por radiación entre un objeto y su entorno es:
+
+$$ H_{neta} = P_{neta} = \epsilon \cdot \sigma \cdot A \cdot (T_{objeto}^4 - T_{entorno}^4) $$
+
+### Analogía con Circuitos Eléctricos y Resistencia Térmica
+
+El análisis de la conducción en estado estacionario se simplifica enormemente usando una analogía con la Ley de Ohm para circuitos eléctricos.
+
+| Magnitud Eléctrica               | Magnitud Térmica                               |
+| -------------------------------- | ---------------------------------------------- |
+| **Corriente (I)** = d(carga)/dt   | **Corriente de Calor (H)** = d(energía)/dt   |
+| **Diferencia de Potencial (ΔV)** | **Diferencia de Temperatura (ΔT)**             |
+| **Resistencia Eléctrica (R)**    | **Resistencia Térmica (R<sub>th</sub>)**       |
+
+La ecuación fundamental del flujo de calor se escribe como:
+
+$$ H = \frac{\Delta T}{R_{th}} $$
+
+Cada capa de material se modela como una resistencia térmica. Para la conducción, esta resistencia es:
+
+$$ R_{th} = \frac{L}{k \cdot A} $$
+
+#### Combinación de Resistencias Térmicas
+
+-   **En Serie (Paredes compuestas):** El calor atraviesa secuencialmente varias capas. El flujo de calor **H es el mismo** en todas. La resistencia total es la suma de las individuales.
+    $$ R_{total} = R_1 + R_2 + ... + R_n $$
+    $$ H = \frac{\Delta T_{total}}{R_{total}} $$
+
+-   **En Paralelo:** El calor fluye simultáneamente por diferentes caminos. La diferencia de temperatura **ΔT es la misma** para todos. El flujo de calor total **H es la suma** de los flujos.
+    $$ \frac{1}{R_{total}} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n} $$
+    $$ H_{total} = H_1 + H_2 + ... $$
+
+Este modelo permite resolver problemas complejos de aislamiento térmico de forma intuitiva y sistemática.
