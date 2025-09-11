@@ -604,7 +604,7 @@ El modelo del **gas ideal** es fundamental para la termodinámica. Se basa en la
     *   Las moléculas se mueven al azar en todas direcciones (isotropía).
 *   **Ecuación de Estado del Gas Ideal:** El comportamiento macroscópico de un gas ideal se describe por la ley de los gases ideales:
     $$ PV = nRT $$
-    Donde *P* es la presión, *V* el volumen, *n* el número de moles, *T* la temperatura absoluta (en Kelvin) y *R* la constante universal de los gases ($R \approx 8.314 \text{ J/mol·K}$).
+    Donde *P* es la presión, *V* el volumen, *n* el número de moles, *T* la temperatura absoluta (en Kelvin) y *R* la constante universal de los gases ($R \approx 8.314 \ \mathrm{J \cdot mol^{-1} \cdot K^{-1}})$
 
 *   **Interpretación Física de la Temperatura y la Energía Interna:** La teoría cinética demuestra que la temperatura es directamente proporcional a la energía cinética promedio de las moléculas. Para un gas ideal **monoatómico** (como el Helio o el Argón), la energía interna depende *únicamente* de su temperatura:
     $$ E_{c, promedio} = \frac{3}{2}kT \quad \text{(por molécula)} $$
