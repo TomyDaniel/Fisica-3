@@ -577,3 +577,141 @@ $$ R_{th} = \frac{L}{k \cdot A} $$
     $$ H_{total} = H_1 + H_2 + ... $$
 
 Este modelo permite resolver problemas complejos de aislamiento térmico de forma intuitiva y sistemática.
+
+---
+
+## Termodinámica y Transferencia de Calor
+
+La termodinámica es la rama de la física que estudia la energía, sus transformaciones y su relación con el calor y el trabajo. La transferencia de calor es la ciencia que se ocupa de la **tasa** a la que se intercambia esta energía debido a una diferencia de temperatura.
+
+### Conceptos Fundamentales
+
+1.  **Energía Interna (U):** Es la suma de todas las energías microscópicas de las partículas que componen un sistema (energía cinética de traslación, rotación y vibración, y energía potencial de los enlaces). **Es una propiedad del sistema, una función de estado.** Un sistema "tiene" energía interna.
+
+2.  **Temperatura (T):** Es una medida macroscópica de la energía cinética promedio de las partículas de un sistema. Determina la dirección del flujo de calor. Dos sistemas en equilibrio térmico tienen la misma temperatura (**Ley Cero de la Termodinámica**).
+
+3.  **Calor (Q):** Es la **energía en tránsito** de un sistema a otro debido exclusivamente a una diferencia de temperatura. El calor no es algo que un cuerpo posee, sino la energía que se transfiere.
+
+4.  **Trabajo (W):** Es la otra forma de transferir energía a un sistema, mediante la aplicación de una fuerza a lo largo de un desplazamiento (ej. un gas que se expande y mueve un pistón).
+
+### Gases Ideales y la Teoría Cinética
+
+El modelo del **gas ideal** es fundamental para la termodinámica. Se basa en la teoría cinética, que describe el gas como un conjunto de partículas con las siguientes propiedades:
+
+*   **Modelo Molecular:**
+    *   Gran número de moléculas, con una distancia promedio entre ellas mucho mayor que su tamaño.
+    *   No hay fuerzas de interacción entre moléculas, excepto durante colisiones elásticas.
+    *   Las moléculas se mueven al azar en todas direcciones (isotropía).
+*   **Ecuación de Estado del Gas Ideal:** El comportamiento macroscópico de un gas ideal se describe por la ley de los gases ideales:
+    $$ PV = nRT $$
+    Donde *P* es la presión, *V* el volumen, *n* el número de moles, *T* la temperatura absoluta (en Kelvin) y *R* la constante universal de los gases ($R \approx 8.314 \text{ J/mol·K}$).
+
+*   **Interpretación Física de la Temperatura y la Energía Interna:** La teoría cinética demuestra que la temperatura es directamente proporcional a la energía cinética promedio de las moléculas. Para un gas ideal **monoatómico** (como el Helio o el Argón), la energía interna depende *únicamente* de su temperatura:
+    $$ E_{c, promedio} = \frac{3}{2}kT \quad \text{(por molécula)} $$
+    $$ U = N \cdot E_{c, promedio} = \frac{3}{2}NkT = \frac{3}{2}nRT $$
+    Donde *k* es la constante de Boltzmann ($k = R/N_A$). Como *U* solo depende de *T*, si la temperatura no cambia ($\Delta T = 0$), la energía interna tampoco cambia ($\Delta U = 0$).
+
+### La Primera Ley de la Termodinámica
+
+La primera ley es una formulación del **principio de conservación de la energía** para sistemas termodinámicos. Establece que el cambio en la energía interna de un sistema ($\Delta U$) es igual al calor neto añadido al sistema ($Q$) menos el trabajo neto realizado *por* el sistema ($W$).
+
+$$ \Delta U = Q - W $$
+
+*   **$\Delta U$ (Cambio de Energía Interna):** Es una **función de estado**, lo que significa que su valor solo depende de los estados inicial y final del sistema, no del camino seguido para ir de uno a otro. Para un gas ideal, $\Delta U = \frac{3}{2}nR\Delta T$.
+*   **$Q$ (Calor):**
+    *   $Q > 0$: El sistema **recibe** calor.
+    *   $Q < 0$: El sistema **cede** calor.
+*   **$W$ (Trabajo):**
+    *   $W > 0$: El sistema **realiza** trabajo sobre el entorno (expansión).
+    *   $W < 0$: El entorno realiza trabajo sobre el sistema (compresión).
+
+El calor y el trabajo **no son funciones de estado**, dependen de la trayectoria del proceso. El trabajo realizado por un gas que cambia su volumen se calcula como:
+$$ W = \int_{V_i}^{V_f} P \, dV $$
+Gráficamente, el trabajo es el **área bajo la curva en un diagrama P-V**.
+
+### Procesos Termodinámicos
+
+Un proceso termodinámico es una transformación de un sistema de un estado de equilibrio a otro.
+
+1.  **Proceso Isocórico (Volumen constante):**
+    *   $V = \text{constante} \implies dV = 0$.
+    *   **Trabajo:** $W = 0$.
+    *   **Primera Ley:** $\Delta U = Q$. Todo el calor intercambiado se convierte en energía interna.
+    *   **Calor:** $Q = n C_v \Delta T$, donde $C_v$ es la capacidad calorífica molar a volumen constante. Para un gas ideal monoatómico, $C_v = \frac{3}{2}R$.
+
+2.  **Proceso Isobárico (Presión constante):**
+    *   $P = \text{constante}$.
+    *   **Trabajo:** $W = P \int_{V_i}^{V_f} dV = P(V_f - V_i) = P\Delta V$.
+    *   **Primera Ley:** $\Delta U = Q - P\Delta V$.
+    *   **Calor:** $Q = n C_p \Delta T$, donde $C_p$ es la capacidad calorífica molar a presión constante. Para un gas ideal, $C_p = C_v + R$.
+
+3.  **Proceso Isotérmico (Temperatura constante):**
+    *   $T = \text{constante}$.
+    *   **Energía Interna:** Como *T* es constante, para un gas ideal $\Delta U = 0$.
+    *   **Primera Ley:** $0 = Q - W \implies Q = W$. Todo el calor absorbido se usa para realizar trabajo.
+    *   **Trabajo:** $W = \int_{V_i}^{V_f} \frac{nRT}{V} dV = nRT \ln\left(\frac{V_f}{V_i}\right)$.
+
+4.  **Proceso Adiabático (Sin intercambio de calor):**
+    *   $Q = 0$. El sistema está térmicamente aislado.
+    *   **Primera Ley:** $\Delta U = -W$. El trabajo se realiza a expensas de la energía interna. Si el gas se expande ($W>0$), su energía interna y temperatura disminuyen.
+    *   **Relación P-V:** $P V^\gamma = \text{constante}$, donde $\gamma = C_p/C_v$ es el coeficiente adiabático.
+
+### La Segunda Ley de la Termodinámica y Entropía
+
+La primera ley dice que la energía se conserva, pero no dice en qué dirección ocurren los procesos. La segunda ley establece esta dirección.
+
+*   **Enunciado de Kelvin-Planck:** Es imposible construir una máquina térmica que, operando en un ciclo, no produzca otro efecto que la absorción de energía en forma de calor de un solo depósito y la realización de una cantidad igual de trabajo. (Es imposible una eficiencia del 100%).
+*   **Enunciado de Clausius:** Es imposible construir una máquina cíclica cuyo único efecto sea transferir calor continuamente de un cuerpo frío a uno caliente sin aporte de trabajo externo.
+
+#### Máquinas Térmicas y Refrigeradores
+
+*   **Máquina Térmica:** Dispositivo que convierte calor en trabajo. Opera en un ciclo, absorbiendo calor ($Q_c$) de un foco caliente ($T_c$), realizando un trabajo neto ($W$) y cediendo calor residual ($Q_f$) a un foco frío ($T_f$).
+    *   **Eficiencia ($\eta$):** $\eta = \frac{\text{Lo que obtengo}}{\text{Lo que me cuesta}} = \frac{W}{Q_c} = 1 - \frac{|Q_f|}{Q_c}$.
+*   **Ciclo de Carnot:** Un ciclo teórico reversible que representa la máxima eficiencia posible para una máquina que opera entre dos temperaturas $T_c$ y $T_f$.
+    *   **Eficiencia de Carnot:** $\eta_C = 1 - \frac{T_f}{T_c}$ (con temperaturas en Kelvin).
+
+#### Entropía (S)
+
+La entropía es una **función de estado** que puede interpretarse como una medida del **desorden** de un sistema o de la energía no disponible para realizar trabajo.
+
+*   **Definición (para un proceso reversible):** El cambio de entropía se define como:
+    $$ \Delta S = \int_{i}^{f} \frac{dQ_{rev}}{T} $$
+*   **La Segunda Ley en términos de Entropía:** Para cualquier proceso que ocurra en un sistema aislado (el universo), la entropía total siempre aumenta o, en el caso ideal de un proceso reversible, permanece constante.
+    $$ \Delta S_{universo} = \Delta S_{sistema} + \Delta S_{entorno} \ge 0 $$
+    Esto significa que los procesos naturales tienden espontáneamente hacia estados de mayor desorden.
+
+### Mecanismos de Transferencia de Calor
+
+La energía térmica se transfiere a través de tres mecanismos distintos:
+
+#### 1. Conducción
+Transferencia por contacto directo a nivel molecular. Domina en sólidos. Se rige por la **Ley de Fourier**:
+$$ H = \frac{dQ}{dt} = k \cdot A \cdot \frac{T_{caliente} - T_{fría}}{L} $$
+*   **k**: Conductividad térmica del material (W/m·K).
+
+#### 2. Convección
+Transferencia mediante el movimiento de un **fluido**. Se modela con la **Ley de Enfriamiento de Newton**:
+$$ H = h \cdot A \cdot (T_{superficie} - T_{fluido}) $$
+*   **h**: Coeficiente de convección, depende de la situación.
+
+#### 3. Radiación
+Transferencia por **ondas electromagnéticas**. No requiere medio. Se describe por la **Ley de Stefan-Boltzmann**:
+$$ P_{emitida} = \epsilon \cdot \sigma \cdot A \cdot T^4 $$
+*   **ε**: Emisividad de la superficie (0 a 1).
+*   **σ**: Constante de Stefan-Boltzmann ($5.67 \times 10^{-8} \text{ W/m}^2\text{K}^4$).
+*   **T**: Temperatura **absoluta** (en Kelvin).
+*   **Tasa neta de transferencia:** $H_{neta} = \epsilon \sigma A (T_{objeto}^4 - T_{entorno}^4)$.
+
+#### Analogía con Circuitos Eléctricos y Resistencia Térmica
+
+El flujo de calor por conducción en estado estacionario se puede modelar como un circuito eléctrico.
+| Magnitud Eléctrica | Magnitud Térmica |
+| :--- | :--- |
+| Corriente (I) | Corriente de Calor (H) |
+| Diferencia de Potencial (ΔV) | Diferencia de Temperatura (ΔT) |
+| Resistencia Eléctrica (R) | **Resistencia Térmica (R<sub>th</sub>)** |
+
+La ecuación es: $H = \frac{\Delta T}{R_{th}}$, donde para la conducción: $R_{th} = \frac{L}{k \cdot A}$.
+
+*   **En Serie (Paredes compuestas):** Las resistencias se suman. $R_{total} = \sum R_i$.
+*   **En Paralelo:** Se suman las inversas de las resistencias. $\frac{1}{R_{total}} = \sum \frac{1}{R_i}$.
