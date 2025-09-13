@@ -129,3 +129,214 @@ Esta ecuación final es muy reveladora y confirma lo que observamos en una onda 
 ### Ondas sonoras
 
 La definición más general del sonido es una onda longitudinal en un medio. Las ondas sonoras más sencillas son las senoidales, las cuales tienen la frecuencia, la amplitud y la longitud de onda completamente especificadas. Las ondas sonoras suelen dispersarse en todas direcciones a partir de la fuente sonido, con una amplitud que depende de la dirección y la distancia a la fuente.
+
+### Intensidad del sonido
+
+Las ondas sonoras viajeras, al igual que todas las ondas viajeras, transfieren energía
+de una región del espacio a otra. La energía transportada por un sonido con intensidad de la onda $I$, que es igual a la rapidez media con que la onda transporta energía, por unidad de área, a través de una superficie perpendicular a la dirección de propagación.
+
+consideremos una onda sonora que se propaga en la dirección 1x, con la finalidad de poder usar las expresiones para el desplazamiento $y(x, t)$ y la fluctuación de la presión $p(x, t)$.
+
+Por lo tanto, la potencia por unidad de área en esta onda sonora es igual al producto de $p(x, t)$ por la velocidad de la partícula, $v_y(x, t)$ es:
+
+$$v_y(x, t) = \frac{\partial y(x, t)}{\partial t} = \omega A \cdot sen(kx-wt)$$
+
+$$p(x, t)v_y(x, t) = [BkA \cdot sen(kx-wt)] [\omega A \cdot sen(kx-wt)]$$
+
+$$ = B\omega kA^2 \cdot sen^2(kx-wt)$$
+
+La intensidad es, por definición, el valor promedio de $p(x, t)v_y(x, t)$. Para cualquier valor de $x$, el valor medio de la función $sen^2(kx - vt)$ durante un periodo $T = 2\pi / \omega$ es así que:
+
+$$I = \frac{1}{2}Bk\omega A^2$$
+
+### Decibelio
+
+El nivel de intensidad de sonido $\beta$ de una onda sonora está definido por la ecuación:
+
+$$ \beta = 10\cdot log_{10}(\frac{I}{I_0}) $$
+
+En esta ecuación, $I_0$ es una intensidad de referencia.
+
+### Interferencias de ondas
+
+Los fenómenos ondulatorios que se presentan cuando dos o más ondas se traslapan en la misma región del espacio se agrupan bajo el concepto de interferencia. Un caso importante ocurre cuando dos o más fuentes emiten ondas coherentes (es decir, con una diferencia de fase constante).
+
+#### Interferencia por Diferencia de Camino
+
+Cuando las ondas de dos o más fuentes se superponen en un punto, el resultado de la interferencia depende de la **diferencia de camino** que cada onda ha recorrido desde su fuente hasta dicho punto. Esta diferencia determina si las ondas llegan en fase o desfasadas.
+
+*   **Interferencia Constructiva:** Ocurre en puntos donde las ondas llegan **en fase** (cresta con cresta). Esto sucede cuando la diferencia de camino es igual a un **número entero de longitudes de onda**. En estos puntos, las amplitudes se suman, resultando en una intensidad máxima.
+    La condición es:
+    $$\Delta d = n\lambda \quad (n = 0, 1, 2, 3, ...)$$
+
+*   **Interferencia Destructiva:** Ocurre en puntos donde las ondas llegan **desfasadas por medio ciclo** (cresta con valle). Esto sucede cuando la diferencia de camino es igual a un **número semientero de longitudes de onda**. En estos puntos, las amplitudes se restan, resultando en una intensidad mínima o nula.
+    La condición es:
+    $$\Delta d = (n + \frac{1}{2})\lambda \quad (n = 0, 1, 2, 3, ...)$$
+
+A diferencia de una onda estacionaria donde no hay flujo neto de energía, en este tipo de interferencia de ondas viajeras la energía se redistribuye en el espacio: se canaliza desde las zonas de interferencia destructiva hacia las zonas de interferencia constructiva.
+
+### Efecto Doppler
+
+El efecto Doppler es cuando una fuente de sonido y un receptor están en movimiento relativo, la frecuencia del sonido oído por el receptor no es el mismo que la frecuencia fuente.
+
+#### Receptor en movimiento
+
+Un receptor $L$ que se mueve con velocidad $v_L$ hacia una fuente estacionaria $S$. La fuente emite una onda sonora con frecuencia $f_S$ y longitud de onda $\lambda = v/f_S$. Las crestas que se acercan al receptor en movimiento tienen una rapidez de propagación relativa al receptor de $(v + v_L)$, así que la frecuencia $f_L$ con que llegan a la posición del receptor es:
+
+$$ f_L = \frac{v+v_L}{\lambda} = \frac{v+v_L}{\frac{v}{f_S}} $$
+
+O tambien:
+
+$$f_L = \frac{v+v_L}{v}f_S = (1+\frac{v_L}{v})f_S$$
+
+Así, un receptor que se mueve hacia una fuente $(v_L > 0)$, oye una frecuencia más alta (tono más agudo) que un receptor estacionario. Un receptor que se aleja de la fuente $(v_L < 0)$ oye una frecuencia más baja (tono más grave)
+
+#### Fuente en movimiento y receptor en movimiento
+
+Ahora la fuente también se mueve, con velocidad $v_S$. La rapidez de la onda relativa al medio (aire) sigue siendo $v$; está determinada por las propiedades del medio y no cambia por el movimiento de la fuente. Sin embargo, la longitud de onda ya no es igual. La longitud de onda es la distancia entre crestas sucesivas, y depende del desplazamiento relativo de la fuente y la onda. En la región a la derecha de la fuente la longitud de onda es:
+
+$$\lambda_{al frente} = \frac{v}{f_S} - \frac{v_s}{f_S} = \frac{v-v_S}{f_S}$$
+
+En la región a la izquierda de la fuente es:
+
+$$\lambda_{detras} = \frac{v+v_S}{f_S}$$
+
+Las ondas adelante y atrás de la fuente se comprimen y estiran, respectivamente, por
+el movimiento de la fuente. Para obtener la frecuencia que oye el receptor detrás de la fuente, sustituimos la ecuación:
+
+$$f_L = \frac{v+v_L}{\lambda_{detras}} = \frac{v+v_L}{\frac{v+v_S}{f_S}}$$
+
+$$f_L = (\frac{v+v_L}{v+v_S}) \cdot f_S $$
+
+Esto expresa la frecuencia $f_L$ oída por el receptor en términos de la frecuencia $f_S$ de
+la fuente
+
+### Ondas Electromagnéticas
+
+A diferencia de las ondas mecánicas, como el sonido, que necesitan un medio material para propagarse, existe otro tipo fundamental de onda que puede viajar a través del vacío: la onda electromagnética.
+
+#### Naturaleza de las Ondas Electromagnéticas
+
+Una **onda electromagnética** es una onda transversal compuesta por campos eléctricos (E) y campos magnéticos (B) oscilantes.
+
+Sus características fundamentales son:
+
+*   **No requieren un medio:** Pueden propagarse tanto en un medio material como en el vacío.
+*   **Son siempre transversales:** Los campos eléctrico y magnético oscilan en direcciones perpendiculares entre sí y, a su vez, perpendiculares a la dirección de propagación de la onda.
+*   **Velocidad en el vacío:** Todas las ondas electromagnéticas viajan en el vacío a la misma rapidez, conocida como la **rapidez de la luz**, denotada por `c`.
+    $$c \approx 3.00 \times 10^8 \, \text{m/s}$$
+*   **Transportan energía:** Al igual que las ondas mecánicas, transportan energía de un lugar a otro.
+
+#### El Espectro Electromagnético
+
+Las ondas electromagnéticas existen en un rango continuo y vastísimo de frecuencias y longitudes de onda, conocido como el **espectro electromagnético**. La relación entre su frecuencia `f` y longitud de onda `λ` en el vacío es:
+
+$$c = \lambda \cdot f$$
+
+El espectro incluye (en orden de longitud de onda decreciente): ondas de radio, microondas, infrarrojo, **luz visible**, ultravioleta, rayos X y rayos gamma. Nuestros ojos solo son sensibles a la pequeña porción del espectro que llamamos luz visible.
+
+#### Polarización
+
+La **polarización** es una propiedad exclusiva de las ondas transversales que describe la orientación de la oscilación de la onda. Dado que las ondas sonoras son longitudinales, no pueden polarizarse.
+
+*   **Onda polarizada linealmente:** Es aquella en la que las oscilaciones del campo eléctrico ocurren a lo largo de una sola dirección en el plano perpendicular a la propagación.
+
+*   **Luz no polarizada:** La mayoría de las fuentes de luz, como el Sol o una bombilla, emiten luz no polarizada. Esto significa que es una superposición de muchas ondas con todas las orientaciones de polarización posibles.
+
+*   **Filtros polarizadores:** Son materiales que transmiten únicamente la componente del campo eléctrico que es paralela a una dirección particular llamada **eje de polarización**. Cuando la luz no polarizada pasa a través de un polarizador, la luz emergente queda polarizada linealmente y su intensidad se reduce a la mitad.
+
+---
+
+## Optica
+
+### Frentes de ondas
+
+Un frente de onda se define como el lugar geométrico de todos los puntos adyacentes en los cuales la fase de vibración de una cantidad física asociada con la onda es la misma. Es decir, en cualquier instante, todos los puntos del frente de onda están en la misma parte de su ciclo de variación
+
+### Reflexión y Refracción
+
+El modelo de la luz basado en rayos para explorar dos de los aspectos más importantes de la propagación de la luz son **reflexión** y **refracción.**
+
+Cuando una onda luminosa incide en una interfaz lisa que separa dos materiales transparentes , la onda en general es reflejada parcialmente y también refractada parcialmente hacia el segundo material
+
+![Reflexion - Refraccion](img/RefraccionRefleccion.png)
+
+Describimos las direcciones de los rayos incidente, reflejado y refractado en una interfaz lisa entre dos materiales ópticos en términos de los ángulos que forman con la normal a la superficie en el punto de incidencia. Si la interfaz es rugosa, tanto la luz transmitida como la reflejada se dispersan en varias direcciones y no hay un ángulo único de transmisión o reflexión. La reflexión con un ángulo definido desde una superficie muy lisa se llama *reflexión especular*. La reflexión dispersa a partir de una superficie áspera se llama *reflexión difusa*.
+
+El índice de refracción de un material óptico, denotado por $n$, desempeña un papel central en la óptica geométrica. Es la razón entre la rapidez de la luz $c$ en el vacío y la rapidez de la luz $v$ en el material:
+
+$$n = \frac{c}{v} $$
+
+La luz siempre viaja con más lentitud en un material que en el vacío, por lo que el valor de $n$ en cualquier material que no sea el vacío siempre es mayor que la unidad.
+
+### Indice de refracción y aspectos ondulatorios
+
+En primer lugar, la frecuencia $f$ de la onda no cambia cuando pasa de un material a otro. Es decir, el número de ciclos de la onda que llegan por unidad de tiempo debe ser igual al número de ciclos que salen por unidad de tiempo; esto significa que la superficie de frontera no puede crear ni destruir ondas.
+
+En segundo lugar, la longitud de onda $\lambda$ de la onda, en general, es diferente en distintos materiales. Esto se debe a que en cualquier material $v = \lambda f$ ; como $f$ es la misma en cualquier material que en el vacío y $v$ siempre es menor que la rapidez $c$ de la onda en el vacío, $\lambda$ también se reduce en forma correspondiente. Así, la longitud de onda $\lambda$ de la luz en un material es menor que la longitud de onda $\lambda_0$ de la misma luz en el vacío.
+
+$$\lambda = \frac{\lambda_0}{n}$$
+
+### Interferencia
+
+Cuando dos o más ondas se traslapan en la misma región del espacio, el desplazamiento resultante en cualquier punto y en cualquier instante se encuentra sumando los desplazamientos instantáneos que produciría en el punto cada onda individual. Este es el principio de superposición.
+
+Para que se forme un patrón de interferencia estable y observable, las fuentes que emiten las ondas deben ser **coherentes**. Esto significa que deben emitir ondas con la misma frecuencia y mantener una relación de fase constante entre ellas (por ejemplo, estar siempre "en fase" en el origen).
+
+El resultado de la interferencia en un punto P depende de la **diferencia de trayectoria** (o diferencia de camino), `r₂ - r₁`, es decir, la diferencia en las distancias desde cada fuente hasta el punto P.
+
+#### Interferencia Constructiva
+
+Ocurre en los puntos del espacio donde las ondas que se superponen llegan **en fase**, de modo que la cresta de una onda coincide con la cresta de la otra. Esto sucede cuando la diferencia de camino es igual a un **número entero de longitudes de onda**.
+
+La condición matemática es:
+$$r_2 - r_1 = m\lambda \quad (m = 0, \pm1, \pm2, \dots)$$
+
+El resultado es una amplitud máxima, igual a la suma de las amplitudes de las ondas individuales. Los puntos donde se cumple esta condición forman líneas o superficies llamadas **curvas antinodales**, que representan zonas de máxima intensidad.
+
+#### Interferencia Destructiva
+
+Ocurre en los puntos donde las ondas llegan **desfasadas por medio ciclo** (180°), de modo que la cresta de una onda coincide con el valle de la otra. Esto sucede cuando la diferencia de camino es igual a un **número semientero de longitudes de onda**.
+
+La condición matemática es:
+$$r_2 - r_1 = (m + \frac{1}{2})\lambda \quad (m = 0, \pm1, \pm2, \dots)$$
+
+El resultado es una amplitud mínima o nula. Esta cancelación se conoce como interferencia destructiva y los puntos donde ocurre forman las **curvas nodales**, que representan zonas de mínima o nula intensidad.
+
+**Nota Importante:** A diferencia de las ondas estacionarias (donde no hay flujo de energía), en un patrón de interferencia de ondas viajeras sí hay un flujo neto de energía. La energía se "canaliza", alejándose de las curvas nodales (interferencia destructiva) y dirigiéndose hacia las curvas antinodales (interferencia constructiva).
+
+### Interferencia de la Luz: El Experimento de Young
+
+El montaje experimental consiste en hacer pasar luz monocromática (de una sola longitud de onda) a través de una primera ranura `S₀`. La onda que emerge de `S₀` ilumina luego una barrera que contiene dos ranuras paralelas muy finas y cercanas entre sí, `S₁` y `S₂`. Estas dos ranuras actúan como dos fuentes de ondas coherentes y en fase, y las ondas que emergen de ellas interfieren en una pantalla lejana.
+
+El resultado observado en la pantalla no son dos simples líneas de luz, sino un patrón característico de **franjas brillantes** y **franjas oscuras** alternadas.
+
+#### Análisis Geométrico
+
+Para un punto P en la pantalla, la interferencia depende de la diferencia de camino, `r₂ - r₁`. Si la distancia `R` a la pantalla es mucho mayor que la separación `d` entre las ranuras, podemos aproximar esta diferencia de camino como:
+
+$$r_2 - r_1 = d \cdot \operatorname{sen} \theta$$
+
+Donde `θ` es el ángulo que forma la línea desde las ranuras hasta el punto P con la normal.
+
+#### Condiciones para Franjas Brillantes (Interferencia Constructiva)
+
+Las franjas brillantes corresponden a los puntos donde la interferencia es constructiva. Esto ocurre cuando la diferencia de camino es un múltiplo entero de la longitud de onda:
+
+$$d \cdot \operatorname{sen} \theta = m\lambda \quad (m = 0, \pm1, \pm2, \dots)$$
+
+#### Condiciones para Franjas Oscuras (Interferencia Destructiva)
+
+Las franjas oscuras corresponden a los puntos donde la interferencia es destructiva. Esto ocurre cuando la diferencia de camino es un múltiplo semientero de la longitud de onda:
+
+$$d \cdot \operatorname{sen} \theta = (m + \frac{1}{2})\lambda \quad (m = 0, \pm1, \pm2, \dots)$$
+
+#### Posición de las Franjas en la Pantalla
+
+Para ángulos `θ` muy pequeños (lo que ocurre en la mayoría de los experimentos reales), podemos usar la aproximación $\operatorname{sen} \theta \approx \tan \theta = y/R$, donde `y` es la posición de la franja en la pantalla medida desde el centro.
+
+Sustituyendo esto en la condición de interferencia constructiva, obtenemos la posición de la m-ésima franja brillante (`y_m`):
+
+$$y_m = R \frac{m\lambda}{d}$$
+
+Esta ecuación es fundamental porque permitió, por primera vez, medir la longitud de onda de la luz a partir de cantidades macroscópicas y medibles (`y_m`, `R` y `d`). La distancia entre franjas brillantes adyacentes es inversamente proporcional a la separación de las ranuras `d`: a menor separación, más ancho es el patrón de interferencia.
