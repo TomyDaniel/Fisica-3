@@ -88,3 +88,44 @@ En una onda que viaja por la cuerda, la amplitud es constante y el patrón de la
 ![Ondas Estacionarias](img/OndasEstacionarias.png)
 
 En un nodo, los desplazamientos de las dos ondas siempre son iguales y opuestos, y se cancelan. Esta cancelación se llaman **interferencia destructiva**. A la mitad del camino entre los nodos están los puntos de máxima amplitud o antinodos. En los antinodos, los desplazamientos de las dos ondas siempre son idénticos, dando un desplazamiento resultante grande; este fenómeno se llama **interferencia constructiva**.
+
+### Descripción matemática de la Onda Estacionaria
+
+Podemos deducir la función de onda para una onda estacionaria utilizando el principio de superposición. Consideremos una onda senoidal que viaja hacia la izquierda (onda incidente) y choca contra un extremo fijo en `x = 0`. Esta onda se refleja y viaja hacia la derecha (onda reflejada).
+
+La reflexión en un **extremo fijo** invierte la onda, lo que equivale a un desfase de 180° o π radianes. Por lo tanto, si la onda reflejada es `y₂(x, t)`, la onda incidente debe tener un signo opuesto.
+
+1.  **Onda incidente** (viaja a la izquierda, hacia el extremo fijo):
+    $$y_1(x, t) = -A \cdot \cos(kx + \omega t)$$
+
+2.  **Onda reflejada** (viaja a la derecha, alejándose del extremo fijo):
+    $$y_2(x, t) = A \cdot \cos(kx - \omega t)$$
+
+La onda estacionaria resultante es la suma de estas dos ondas viajeras:
+
+$$y(x, t) = y_1(x, t) + y_2(x, t) = A[-\cos(kx + \omega t) + \cos(kx - \omega t)]$$
+
+Para simplificar esta expresión, usamos la identidad trigonométrica para la suma y diferencia de cosenos. Tras aplicar la identidad y combinar términos, obtenemos la función de la onda estacionaria:
+
+$$y(x, t) = (2A \cdot \operatorname{sen} kx) \cdot \operatorname{sen} \omega t$$
+
+Podemos reescribir esta ecuación como:
+
+$$y(x, t) = (A_{sw} \cdot \operatorname{sen} kx) \cdot \operatorname{sen} \omega t$$
+
+Donde $A_{sw} = 2A$ es la amplitud máxima en los puntos de interferencia constructiva (los antinodos).
+
+Esta ecuación final es muy reveladora y confirma lo que observamos en una onda estacionaria:
+
+*   **Factor de Amplitud (dependiente de la posición):** El término $(A_{sw} \operatorname{sen} kx)$ actúa como una amplitud que **depende de la posición `x`**. No es constante como en una onda viajera.
+    *   En los **nodos**, la amplitud es siempre cero. Esto ocurre cuando $\operatorname{sen} kx = 0$.
+    *   En los **antinodos**, la amplitud es máxima ($A_{sw}$). Esto ocurre cuando $\operatorname{sen} kx = \pm1$.
+*   **Factor de Oscilación (dependiente del tiempo):** El término $(\operatorname{sen} \omega t)$ muestra que todas las partículas de la cuerda realizan un movimiento armónico simple con la misma frecuencia angular $\omega$. A diferencia de una onda viajera, la forma de la onda no se propaga, sino que permanece en la misma posición, oscilando verticalmente.
+
+---
+
+## Sonido
+
+### Ondas sonoras
+
+La definición más general del sonido es una onda longitudinal en un medio. Las ondas sonoras más sencillas son las senoidales, las cuales tienen la frecuencia, la amplitud y la longitud de onda completamente especificadas. Las ondas sonoras suelen dispersarse en todas direcciones a partir de la fuente sonido, con una amplitud que depende de la dirección y la distancia a la fuente.
