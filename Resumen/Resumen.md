@@ -417,3 +417,101 @@ $$ \operatorname{sen} \theta \approx \tan \theta = \frac{y_m}{R} $$
 Sustituyendo esto en la condición para las franjas oscuras, obtenemos la posición de los mínimos de difracción:
 
 $$ y_m = R \frac{m\lambda}{a} \quad (m = \pm1, \pm2, \pm3, \dots) $$
+
+## Termodinamica
+
+### Sistemas termodinamicos
+
+En general, un sistema termodinámico es cualquier conjunto de objetos que conviene considerar como una unidad, y que podría intercambiar energía con el entorno.
+
+Se denomina proceso termodinámico a los cambios en el estado de un sistema termodinámico.
+
+Describimos las relaciones de energía de cualquier proceso termodinámico en términos de la cantidad de calor $Q$ agregada al sistema y el trabajo $W$ realizado por él. Tanto $Q$ como $W$ pueden ser positivos, negativos o cero.
+
+- **Posibles valores de $Q$**
+
+    - **Positivo:** Un valor positivo de Q representa flujo de calor hacia el sistema, con un suministro de energía correspondiente.
+
+    - **Negativo:** Un Q negativo representa flujo de calor hacia afuera del sistema
+
+- **Posibles valores de $W$**
+
+    - **Positivo:** Un valor positivo de $W$ representa trabajo realizado por el sistema contra el entorno, como el de un gas en expansión y, por lo tanto, corresponde a la energía que sale del sistema.
+
+    - **Negativo:** Un $W$ negativo, como el realizado durante la compresión de un gas, cuando el entorno realiza trabajo sobre el gas, representa energía que entra en el sistema.
+
+### Proceso termodinamico: Trabajo
+
+Cuando un sistema termodinámico cambia de un estado inicial a uno final, pasa por una serie de estados intermedios, a los que llamamos trayectoria. Si todos son estados de equilibrio, la trayectoria podrá verse en una gráfica $pV$.
+
+El trabajo realizado por el sistema depende no sólo de los estados inicial y final, sino también de los estados intermedios, es decir, de la trayectoria.
+
+![Trayectoria](img/Trayectoria.png)
+
+En punto 1 tenemos nuestro estado inicial, con una presion $p_1$ y un volumen $V_1$, queriendo ir hacia el punto 2 que sera nuestro estado final dado por una presion $p_2$ y un volumen $V_2$
+
+- *Punto 1 -> 3*: El trabajo efectuado por el sistema durante este proceso es el área bajo la línea
+
+- *Punto 3 -> 2*: El trabajo efectuado es nulo, a volumen constante no se efectua trabajo.
+
+- *Punto 1 -> 4*: El trabajo efectuado es nulo, a volumen constante no se efectua trabajo.
+
+- *Punto 4 -> 2*: El trabajo efectuado por el sistema durante este proceso es el área bajo la línea
+
+La curva continua de *1 a 2* es otra posibilidad, y el trabajo para esta trayectoria es diferente del de cualquiera de las otras. Se incrementa el volumen mientras se reduce la presión.
+
+Además, podemos llevar al sistema por una serie de estados que formen un ciclo completo, como *1 -> 3 -> 2 -> 4 -> 1*. En este caso, el estado final será el mismo que el inicial, pero el trabajo total efectuado por el sistema no es cero.
+
+### Proceso termodinamico: Calor
+
+Al igual que el trabajo, el calor agregado a un sistema termodinámico cuando cambia de estado depende de la trayectoria del estado inicial al final.
+
+Al igual que el trabajo, el calor depende no sólo de los estados inicial y final, sino también de la trayectoria. Por esta dependencia de la trayectoria, es absurdo decir que un sistema “contiene” cierta cantidad de calor.
+
+### Energia interna
+
+La energía interna es uno de los conceptos más importantes de la termodinámica. 
+
+La energía interna de un sistema como la suma de las energías cinéticas de todas sus partículas constituyentes, más la suma de todas las energías potenciales de interacción entre ellas.
+
+Usamos el símbolo $U$ para la energía interna. Durante un cambio de estado del sistema, la energía interna podría cambiar de un valor inicial $U_1$ a uno final $U_2$. Denotamos el cambio en energía interna con $\Delta U = U_2 - U_1$.
+
+A diferencia del trabajo $W$ y el calor $Q$, que dependen de la trayectoria, el cambio en la energía interna $ΔU$ solo depende de los estados inicial y final. No importa cómo el sistema fue de 1 a 2, el $ΔU$ siempre será el mismo. Por esta razón, se dice que la energía interna es una función de estado. Esto significa que, si un sistema recorre un ciclo completo volviendo a su estado inicial, el cambio neto en su energía interna siempre es cero $(ΔU_{ciclo} = 0)$.
+
+Sabemos que la transferencia de calor es transferencia de energía. Si agregamos cierta cantidad de calor $Q$ a un sistema y éste no realiza trabajo en el proceso, la energía interna aumenta en una cantidad igual a $Q$; es decir, $\Delta U = Q$. Si el sistema efectúa un trabajo $W$ expandiéndose contra su entorno y no se agrega calor durante ese proceso, sale energía del sistema y disminuye la energía interna. Es decir, si $W$ es positivo, $\Delta U$ es negativo, y viceversa: $\Delta U = -W$. Si hay tanto transferencia de calor como trabajo, el cambio total de energía interna es:
+
+$$U_2-U_1=\Delta U = Q - W$$
+
+En general, cuando se agrega calor $Q$ a un sistema, una parte de esta energía agregada permanece en el sistema, modificando su energía interna en una cantidad $\Delta U$; el resto sale del sistema cuando éste efectúa un trabajo $W$ contra su entorno. Puesto que $W$ y $Q$ pueden ser positivos, negativos o cero, $\Delta U$ puede ser positiva, negativa o cero para diferentes procesos.
+
+La primera ley de la termodinámica, que es una generalización del principio de conservación de la energía para incluir la transferencia de energía como calor y como trabajo mecánico.
+
+### Tipos de procesos termodinamicos
+
+Describiremos cuatro clases específicas de procesos termodinámicos que se dan con frecuencia en situaciones prácticas y que podemos resumir como “sin transferencia de calor” o adiabáticos, “a volumen constante” o isocóricos, “a presión constante” o isobáricos, y “a temperatura constante” o isotérmicos.
+
+#### Proceso adiabatico
+
+Definimos un proceso adiabático como aquel donde no entra ni sale calor del sistema: $Q = 0$
+
+$$U_2 - U_1 = \Delta U = -W$$
+
+Cuando un sistema se expande adiabáticamente, $W$ es positivo, así que $\Delta U$ es negativo y la energía interna disminuye. Si un sistema se comprime adiabáticamente, $W$ es negativo y $U$ aumenta.
+
+#### Proceso isocorico
+
+Un proceso isocórico se efectúa a volumen constante. Si el volumen de un sistema termodinámico es constante, no efectúa trabajo sobre su entorno; por lo que $W = 0$
+
+$$U_2 - U_1 = \Delta U = Q$$
+
+En un proceso isocórico, toda la energía agregada como calor permanece en el sistema como aumento de energía interna.
+
+#### Proceso isobarico
+
+Un proceso isobárico se efectúa a presión constante. En general, ninguna de las tres cantidades: $\Delta U$, $Q$ y $W$ es cero en un proceso isobárico, pero aun así es sencillo calcular $W$
+
+$$W=p(V_2-V_1)$$
+
+#### Proceso isotermico
+
+Un proceso isotérmico se efectúa a temperatura constante. Para ello, todo intercambio de calor con el entorno debe efectuarse con tal lentitud para que se mantenga el equilibrio térmico. En general, ninguna de las cantidades $\Delta U$, $Q$ o $W$ es cero en un proceso isotérmico.
