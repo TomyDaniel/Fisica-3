@@ -340,3 +340,80 @@ Sustituyendo esto en la condición de interferencia constructiva, obtenemos la p
 $$y_m = R \frac{m\lambda}{d}$$
 
 Esta ecuación es fundamental porque permitió, por primera vez, medir la longitud de onda de la luz a partir de cantidades macroscópicas y medibles (`y_m`, `R` y `d`). La distancia entre franjas brillantes adyacentes es inversamente proporcional a la separación de las ranuras `d`: a menor separación, más ancho es el patrón de interferencia.
+
+### Interferencia en Peliculas Delgadas
+
+Las ondas luminosas se reflejan en las superficies anterior y posterior de esas finas películas y se produce interferencia constructiva entre las dos ondas reflejadas en diferentes lugares para distintas longitudes de onda.
+
+La luz que ilumina la superficie superior de una película delgada con espesor $t$ se refleja parcialmente en esa superficie. La luz transmitida a través de la superficie superior se refleja parcialmente en la superficie inferior.
+
+Las dos ondas reflejadas llegan juntas a la retina del ojo. En función de la relación de fase, interferirán en forma constructiva o destructiva. Diferentes colores tienen distintas longitudes de onda, por lo que la interferencia puede ser constructiva para unos colores y destructiva para otros.
+
+![Peliculas Delgadas](img/PeliculasDelgadas.png)
+
+- **Imagen A:** Cuando $n_a > n_b$, la luz viaja con más lentitud en el primer material
+que en el segundo. El desplazamiento de fase de la onda reflejada en relación con la onda incidente es de cero
+
+- **Imagen B:** Cuando $n_a = n_b$, la onda reflejada es cero. La onda luminosa incidente no puede “ver” la interfaz y no hay una onda reflejada.
+
+- **Imagen C:** Cuando $n_a < n_b$, la luz viaja con más lentitud en el segundo material que en el primero. El desplazamiento de fase de la onda reflejada en relación con la onda incidente es $\pi$ rad
+
+Este análisis se resume en forma matemática. Si la película tiene espesor $t$, la luz tiene incidencia normal y longitud de onda $\lambda$ en la película; si ninguna o si ambas ondas reflejadas en las dos superficies tienen un desplazamiento de fase de medio ciclo por reflexión, las condiciones para que haya interferencia constructiva y destructiva son las siguientes:
+
+- **Reflexión constructiva en película delgada, sin desplazamiento relativo de fase:**
+
+$$2 \cdot t = m \cdot \lambda$$
+
+Para $m$= $0,1,2,3,...$
+
+- **Reflexión destructiva en película delgada, sin desplazamiento relativo de fase:**
+
+$$2 \cdot t = (m + \frac{1}{2})\lambda$$
+
+Para $m$= $0,1,2,3,...$
+
+Si una de las dos ondas tiene un desplazamiento de fase de medio ciclo por reflexión, las condiciones para que haya interferencia constructiva y destructiva se invierten:
+
+- **Reflexión constructiva en película delgada, con desplazamiento relativo de fase:**
+
+$$2 \cdot t = (m + \frac{1}{2})\lambda$$
+
+Para $m$= $0,1,2,3,...$
+
+- **Reflexión destructiva en película delgada, con desplazamiento relativo de fase:**
+
+$$2 \cdot t = m \cdot \lambda$$
+
+Para $m$= $0,1,2,3,...$
+
+### Difracción de una sola ranura
+
+Cuando un frente de onda plano pasa a través de una ranura estrecha, la onda se desvía, dando lugar a un patrón de interferencia conocido como patrón de difracción. Este fenómeno se puede explicar utilizando el principio de Huygens, que establece que cada punto en el frente de onda dentro de la ranura actúa como una fuente de ondas secundarias.
+
+El patrón de difracción consiste en una banda central brillante, que puede ser mucho más amplia que el ancho de la ranura, bordeada de bandas oscuras y brillantes alternas, cuya intensidad decrece rápidamente. Aproximadamente el 85% de la potencia del haz transmitido se encuentra en la banda brillante central, cuya anchura resulta ser inversamente proporcional al ancho de la ranura. En general, cuanto menos ancha sea la ranura, más amplio será el patrón de difracción en su totalidad.
+
+#### Análisis de los Mínimos de Difracción (Franjas Oscuras)
+
+Para encontrar la posición de las franjas oscuras, consideramos las ondas que provienen de diferentes puntos dentro de una ranura de ancho `a`. Analizamos el caso de la difracción de Fraunhofer, donde la pantalla está muy lejos de la ranura, de modo que los rayos que llegan a un punto P pueden considerarse paralelos.
+
+Consideremos un rayo que sale del borde superior de la ranura y otro que sale del centro. El segundo rayo debe viajar una distancia extra de `(a/2) sen θ` para llegar a la pantalla. Si esta diferencia de camino es exactamente media longitud de onda (`λ/2`), los dos rayos llegarán a la pantalla desfasados por medio ciclo e interferirán destructivamente.
+
+$$ \frac{a}{2} \operatorname{sen} \theta = \frac{\lambda}{2} \implies a \operatorname{sen} \theta = \lambda $$
+
+Bajo esta condición, no solo esos dos rayos se cancelan. Cada rayo de la mitad superior de la ranura será cancelado por un rayo correspondiente de la mitad inferior. Por lo tanto, la luz de toda la ranura se cancela, produciendo la **primera franja oscura**.
+
+Siguiendo la misma lógica, podemos encontrar la segunda franja oscura dividiendo la ranura en cuatro cuartos. La cancelación total ocurrirá si `a sen θ = 2λ`. Generalizando, la condición para que haya una franja oscura en el ángulo `θ` es:
+
+$$ \operatorname{sen} \theta = \frac{m\lambda}{a} \quad (m = \pm1, \pm2, \pm3, \dots) $$
+
+**Nota importante:** El valor `m = 0` **no** corresponde a una franja oscura. Corresponde al punto central en la pantalla (`θ = 0`), donde todos los rayos llegan en fase, creando la **banda brillante central**, que es la más intensa de todo el patrón.
+
+#### Posición de las Franjas Oscuras en la Pantalla
+
+Si la distancia de la ranura a la pantalla es `R` y la posición de la m-ésima franja oscura medida desde el centro es `y_m`, podemos usar la aproximación para ángulos pequeños (válida si `y_m << R`):
+
+$$ \operatorname{sen} \theta \approx \tan \theta = \frac{y_m}{R} $$
+
+Sustituyendo esto en la condición para las franjas oscuras, obtenemos la posición de los mínimos de difracción:
+
+$$ y_m = R \frac{m\lambda}{a} \quad (m = \pm1, \pm2, \pm3, \dots) $$
