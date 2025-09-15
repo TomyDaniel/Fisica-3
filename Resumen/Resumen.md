@@ -418,7 +418,7 @@ Sustituyendo esto en la condición para las franjas oscuras, obtenemos la posici
 
 $$ y_m = R \frac{m\lambda}{a} \quad (m = \pm1, \pm2, \pm3, \dots) $$
 
-## Termodinamica
+## Termodinamica - 1ra ley
 
 ### Sistemas termodinamicos
 
@@ -515,3 +515,115 @@ $$W=p(V_2-V_1)$$
 #### Proceso isotermico
 
 Un proceso isotérmico se efectúa a temperatura constante. Para ello, todo intercambio de calor con el entorno debe efectuarse con tal lentitud para que se mantenga el equilibrio térmico. En general, ninguna de las cantidades $\Delta U$, $Q$ o $W$ es cero en un proceso isotérmico.
+
+## Termodinamica - 2da ley
+
+### Dirección de los procesos termodinamicos
+
+Todos los procesos termodinámicos que se dan en la naturaleza son procesos irreversibles, es decir, procesos que se efectúan espontáneamente en una dirección pero no en otra.
+
+A pesar de esta dirección preferida para todos los procesos naturales, podemos imaginar una clase de procesos idealizados que serían reversibles. Un sistema que sufre semejante proceso reversible idealizado siempre está muy cerca del equilibrio termodinámico dentro de sí y con su entorno. Cualquier cambio de estado que se presente podría revertirse modificando infinitesimalmente las condiciones del sistema.
+
+Entonces, los procesos reversibles son proceso en equilibrio, con el sistema siempre en equilibrio termodinámico. Desde luego, si semejante sistema estuviera realmente en equilibrio termodinámico, no habría cambio de estado. No hay flujo de calor dentro de un sistema que tiene una temperatura verdaderamente uniforme en todas sus partes, y un sistema que en verdad está en equilibrio mecánico no se expande ni realiza trabajo sobre su entorno
+
+### Maquinas termicas
+
+Un dispositivo que transforma calor parcialmente en trabajo o energía mecánica es una máquina térmica. Por lo regular, una cantidad de materia dentro del motor experimenta entrada y salida de calor, expansión y comprensión, y a veces cambia de fase. Llamamos a ésta la sustancia de trabajo de la máquina.
+
+El tipo de máquina más fácil de analizar es aquel donde la sustancia de trabajo efectúa un proceso cíclico, es decir, una sucesión de procesos que al final deja la sustancia en el estado que inició.
+
+Todas las máquinas térmicas absorben calor de una fuente a una temperatura relativamente alta, realizan un trabajo mecánico y desechan o rechazan algo de calor a una temperatura más baja. En lo que a la máquina concierne, el calor desechado se desperdicia. 
+
+Si un sistema pasa por un proceso cíclico, sus energías internas inicial y final son la misma. Para todo proceso cíclico, la primera ley de la termodinámica exige que:
+
+$$U_2 - U_1 = 0 = Q - W $$ asi que $$ Q = W $$
+
+Es decir, el calor neto que fluye hacia la máquina en un proceso cíclico es igual al trabajo neto realizado por la máquina.
+
+### Flujos
+
+La máquina en sí se representa con un círculo. El calor $Q_H$ suministrado a la máquina por la fuente caliente es proporcional a la anchura de la “tubería” de entrada en la parte superior del diagrama. La anchura de la tubería de salida abajo es proporcional a la magnitud $|Q_H|$ del calor rechazado en el escape. El ramal de la derecha representa la porción del calor suministrado que la máquina convierte en trabajo mecánico, $W$.
+
+![Maquina Termica](img/MaquinaTermica.png)
+
+Si una máquina repite el mismo ciclo una y otra vez, $Q_H$ y $Q_C$ representan el calor absorbido y rechazado por la máquina durante un ciclo; $Q_H$ es positivo, y $Q_C$, negativo. El calor neto $Q$ absorbido por ciclo es:
+
+$$Q = Q_H + Q_C = |Q_H| - |Q_C|$$
+
+La salida útil de la máquina es el trabajo neto $W$ efectuado por la sustancia de trabajo. Por la primera ley:
+
+$$W = Q = Q_H + Q_C = |Q_H| - |Q_C|$$
+
+Idealmente, nos gustaría convertir todo el calor $Q_H$ en trabajo; en tal caso, tendríamos $Q_H = W$ y $Q_C = 0$. La experiencia muestra que esto es imposible; siempre se desperdicia algo de calor y $Q_C$ nunca es cero. Definimos la eficiencia térmica de una máquina, denotada con $e$, como el cociente:
+
+$$ e = \frac{W}{Q_H} = 1 + \frac{Q_C}{Q_H} = 1 - \frac{|Q_C|}{|Q_H|}$$
+
+La eficiencia térmica $e$ representa la fracción de QH que sí se convierte en trabajo.
+
+### Refrigerador
+
+Un refrigerador es como una máquina térmica que opera en reversa. Una máquina térmica toma calor de un lugar caliente y lo cede a un lugar más frío. Un refrigerador hace lo contrario; toma calor de un lugar frío y lo cede a un lugar más caliente. Una máquina térmica tiene una salida neta de trabajo mecánico; el refrigerador requiere una entrada neta de trabajo mecánico.
+
+**Coefieciente de rendiemiento:**
+
+$$ K = \frac{|Q_C|}{|W|} = \frac{|Q_C|}{|Q_H| - |Q_C|} $$
+
+### Segunda ley de la termodinamica
+
+Es imposible que un sistema efectúe un proceso en el que absorba calor de una fuente de temperatura uniforme y lo convierta totalmente en trabajo mecánico, terminando en el mismo estado en que inició.
+
+### Ciclo de Carnot
+
+La segunda ley de la termodinámica nos dice que una eficiencia del 100% es imposible. Esto plantea la pregunta: ¿cuál es la máxima eficiencia posible que puede tener una máquina, dadas dos temperaturas de fuente, `T_H` y `T_C`? El ingeniero francés Sadi Carnot contestó a esta pregunta en 1824, diseñando un ciclo termodinámico idealizado y reversible que establece el límite máximo de eficiencia posible.
+
+Para lograr la máxima eficiencia, el ciclo debe evitar todos los procesos irreversibles. La transferencia de calor a través de una diferencia de temperatura finita es irreversible. Por lo tanto, los procesos en los que se transfiere calor deben ser **isotérmicos** (a temperatura `T_H` o `T_C`). Los procesos en los que la temperatura cambia deben ocurrir sin transferencia de calor, es decir, deben ser **adiabáticos**.
+
+#### Pasos del Ciclo de Carnot
+
+El ciclo de Carnot consiste en dos procesos isotérmicos y dos adiabáticos, todos ellos reversibles. Utilizando un gas ideal como sustancia de trabajo, los cuatro pasos son:
+
+1.  El gas se expande **isotérmicamente** a temperatura `T_H`, absorbiendo una cantidad de calor `Q_H`.
+2.  El gas se expande **adiabáticamente** hasta que su temperatura baja a `T_C`.
+3.  El gas se comprime **isotérmicamente** a temperatura `T_C`, expulsando una cantidad de calor `Q_C`.
+4.  El gas se comprime **adiabáticamente** hasta regresar a su estado inicial y a su temperatura `T_H`.
+
+#### Eficiencia de una Máquina de Carnot
+
+Podemos calcular la eficiencia de una máquina de Carnot que utiliza un gas ideal analizando el calor transferido en los dos procesos isotérmicos.
+
+1.  En la expansión isotérmica a `T_H`, el calor absorbido es:
+    $$Q_H = nRT_H \ln\left(\frac{V_b}{V_a}\right)$$
+2.  En la compresión isotérmica a `T_C`, el calor cedido es:
+    $$Q_C = nRT_C \ln\left(\frac{V_d}{V_c}\right) = -nRT_C \ln\left(\frac{V_c}{V_d}\right)$$
+
+La razón entre las dos cantidades de calor es entonces:
+$$ \frac{Q_C}{Q_H} = -\frac{T_C}{T_H} \frac{\ln(V_c/V_d)}{\ln(V_b/V_a)} $$
+
+La clave para simplificar esta expresión se encuentra en los dos procesos adiabáticos (pasos 2 y 4). Para un proceso adiabático de un gas ideal, la relación entre temperatura y volumen es $TV^{\gamma-1} = \text{constante}$. Aplicando esto a nuestros dos procesos adiabáticos tenemos:
+$$ T_H V_b^{\gamma-1} = T_C V_c^{\gamma-1} \quad \text{y} \quad T_H V_a^{\gamma-1} = T_C V_d^{\gamma-1} $$
+
+Al dividir la primera de estas ecuaciones entre la segunda, obtenemos:
+$$ \left(\frac{V_b}{V_a}\right)^{\gamma-1} = \left(\frac{V_c}{V_d}\right)^{\gamma-1} \implies \frac{V_b}{V_a} = \frac{V_c}{V_d} $$
+
+Este importante resultado muestra que los dos términos logarítmicos en la razón de los calores son iguales y, por lo tanto, se cancelan. La ecuación se reduce a:
+$$ \frac{Q_C}{Q_H} = -\frac{T_C}{T_H} \quad \text{o en magnitudes} \quad \frac{|Q_C|}{|Q_H|} = \frac{T_C}{T_H} $$
+
+Al sustituir esta relación fundamental en la ecuación general de la eficiencia térmica, obtenemos la **eficiencia de una máquina de Carnot**:
+
+$$ e_{carnot} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H} $$
+
+Este sencillo resultado revela que la eficiencia de una máquina ideal de Carnot depende **únicamente** de las temperaturas (expresadas en Kelvin) de las dos fuentes de calor. La eficiencia es alta cuando la diferencia de temperaturas es grande, y nunca puede ser exactamente 1 (100%) a menos que la fuente fría estuviera en el cero absoluto (`T_C = 0 K`), lo cual es imposible.
+
+#### El Refrigerador de Carnot
+
+Dado que cada paso del ciclo de Carnot es reversible, todo el ciclo puede invertirse, convirtiendo la máquina en un **refrigerador ideal de Carnot**. Su coeficiente de rendimiento representa el máximo rendimiento posible para un refrigerador que opera entre dos temperaturas, `T_C` y `T_H`.
+
+Podemos encontrar su coeficiente de rendimiento combinando la definición general de `K` con la relación de calor-temperatura del ciclo de Carnot que ya encontramos:
+
+$$ \frac{|Q_C|}{|Q_H|} = \frac{T_C}{T_H} $$
+
+Sustituyendo esta relación en la ecuación de `K`, obtenemos el **coeficiente de rendimiento de un refrigerador de Carnot**:
+
+$$ K_{Carnot} = \frac{T_C}{T_H - T_C} $$
+
+Este resultado muestra que el rendimiento de un refrigerador ideal depende únicamente de las temperaturas. Si la diferencia de temperatura `T_H - T_C` es pequeña, `K` es muy grande, lo que significa que se puede "bombear" mucho calor con muy poco gasto de trabajo. Cuanto mayor sea la diferencia de temperatura, menor será `K` y se requerirá más trabajo para transferir la misma cantidad de calor.
