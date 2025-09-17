@@ -418,6 +418,262 @@ Sustituyendo esto en la condición para las franjas oscuras, obtenemos la posici
 
 $$ y_m = R \frac{m\lambda}{a} \quad (m = \pm1, \pm2, \pm3, \dots) $$
 
+## Temperatura y calor
+
+### Temperatura y equilibrio termico
+
+Un cuerpo que se siente caliente suele tener una temperatura más alta, que un cuerpo similar que se siente frío. Sin embargo, muchas propiedades de la materia que podemos medir dependen de la temperatura
+
+La temperatura también se relaciona con la energía cinética de las moléculas de un material.
+
+Llamamos equilibrio térmico cuando el sistema está en una condición de equilibrio.
+
+### Ley cero de la termodinamica
+
+Si inicialmente C está en equilibrio térmico con A y con B, entonces A y B también están en equilibrio térmico entre sí. Este resultado se llama ley cero de la termodinámica.
+
+Dos sistemas están en equilibrio térmico si y sólo si tienen la misma temperatura.
+
+### Dilatación Térmica
+
+Cuando la temperatura de un material cambia, sus dimensiones, como la longitud, el área o el volumen, también cambian. Este fenómeno se conoce como dilatación o expansión térmica.
+
+#### Expansión Lineal
+
+Experimentalmente se observa que, para cambios de temperatura no muy grandes (`ΔT`), el cambio en la longitud (`ΔL`) de un objeto sólido es directamente proporcional tanto a su longitud inicial (`L₀`) como al cambio de temperatura.
+
+Esta relación se expresa con la ecuación de **expansión térmica lineal**:
+
+$$ \Delta L = \alpha L_0 \Delta T $$
+
+La constante `α` es una propiedad del material llamada **coeficiente de expansión lineal**, y sus unidades son K⁻¹ o (°C)⁻¹. A partir de esto, la longitud final `L` de un objeto a una temperatura `T = T₀ + ΔT` es:
+
+$$ L = L_0 + \Delta L = L_0(1 + \alpha \Delta T) $$
+
+##### Perspectiva Molecular
+
+A nivel molecular, la expansión térmica se debe a que los átomos de un sólido vibran alrededor de sus posiciones de equilibrio. Al aumentar la temperatura, aumenta la energía y la amplitud de estas vibraciones. Debido a que las fuerzas interatómicas no son simétricas (es más fácil separar los átomos que juntarlos), la distancia *media* entre los átomos aumenta con la temperatura, lo que resulta en la expansión del material en todas sus dimensiones.
+
+#### Expansión de volumen
+
+Un aumento de temperatura usualmente causa un aumento en el volumen tanto de sólidos como de líquidos. De manera análoga a la expansión lineal, el cambio en el volumen (`ΔV`) es aproximadamente proporcional al cambio de temperatura (`ΔT`) y al volumen inicial (`V₀`).
+
+Esta relación se describe con la ecuación de **expansión térmica de volumen**:
+
+$$ \Delta V = \beta V_0 \Delta T $$
+
+La constante `β` es el **coeficiente de expansión de volumen** del material. Al igual que el coeficiente lineal, sus unidades son K⁻¹ o (°C)⁻¹. El volumen final `V` a una temperatura `T = T₀ + ΔT` es:
+
+$$ V = V_0 + \Delta V = V_0(1 + \beta \Delta T) $$
+
+#### Relación entre los Coeficientes de Expansión Lineal y de Volumen
+
+Para los materiales sólidos, existe una relación sencilla entre el coeficiente de expansión de volumen (`β`) y el coeficiente de expansión lineal (`α`). Si consideramos un cubo de material con lado inicial `L₀`, su volumen inicial es `V₀ = L₀³`.
+
+Cuando la temperatura aumenta, cada lado se expande linealmente. Para pequeños cambios de temperatura, se puede demostrar que el cambio en el volumen es aproximadamente tres veces el cambio lineal. Por lo tanto, la relación es:
+
+$$ \beta \approx 3\alpha $$
+
+Esta relación es útil porque generalmente es más fácil encontrar valores tabulados para el coeficiente de expansión lineal `α`.
+
+#### Esfuerzo Térmico
+
+Si los extremos de una varilla se sujetan rígidamente para impedir su expansión o contracción y luego se cambia su temperatura, aparecen fuerzas internas de tensión o compresión. El esfuerzo (`F/A`) asociado a estas fuerzas se denomina **esfuerzo térmico**.
+
+La varilla intenta cambiar su longitud debido al cambio de temperatura, pero las sujeciones se lo impiden. Para calcular este esfuerzo, seguimos un proceso en dos pasos:
+
+1.  Calculamos el cambio de longitud fraccionario que la varilla **sufriría** si estuviera libre:
+    $$ \left(\frac{\Delta L}{L_0}\right)_{\text{térmico}} = \alpha \Delta T $$
+
+2.  Para que la longitud total no cambie, debe generarse un esfuerzo de tensión o compresión que produzca un cambio de longitud fraccionario igual y opuesto. Según la definición del Módulo de Young (`Y`):
+    $$ \left(\frac{\Delta L}{L_0}\right)_{\text{tensión}} = \frac{F}{AY} $$
+
+Dado que el cambio de longitud total debe ser cero, la suma de ambos cambios fraccionarios también debe serlo:
+$$ \left(\frac{\Delta L}{L_0}\right)_{\text{térmico}} + \left(\frac{\Delta L}{L_0}\right)_{\text{tensión}} = 0 $$
+$$ \alpha \Delta T + \frac{F}{AY} = 0 $$
+
+Al despejar el esfuerzo (`F/A`), obtenemos la fórmula para el esfuerzo térmico:
+
+$$ \frac{F}{A} = -Y \alpha \Delta T $$
+
+**Interpretación de la fórmula:**
+
+*   Si la temperatura **aumenta** (`ΔT` es positivo), el esfuerzo es negativo (`F/A < 0`), lo que indica un **esfuerzo de compresión**. La varilla quiere expandirse y las sujeciones la comprimen para evitarlo.
+*   Si la temperatura **disminuye** (`ΔT` es negativo), el esfuerzo es positivo (`F/A > 0`), lo que indica un **esfuerzo de tensión**. La varilla quiere contraerse y las sujeciones la estiran para mantener su longitud.
+
+Los esfuerzos térmicos pueden ser muy grandes y deben ser considerados por los ingenieros en el diseño de estructuras como puentes, vías de tren y tuberías, que suelen incorporar juntas de expansión para permitir la dilatación y contracción de los materiales.
+
+### Calor Específico
+
+La cantidad de calor `Q` necesaria para cambiar la temperatura de un cuerpo es proporcional a la masa `m` del cuerpo y al cambio de temperatura `ΔT = T₂ - T₁`. La naturaleza del material también es un factor determinante. Juntando estas relaciones, tenemos:
+
+$$ Q = mc\Delta T $$
+
+Donde `c` es una cantidad, diferente para cada material, llamada **calor específico**. Representa la cantidad de calor necesaria para elevar la temperatura de una unidad de masa de un material en un grado. Sus unidades en el SI son J/(kg·K).
+
+*   Si `Q` y `ΔT` son positivos, entra calor al cuerpo y su temperatura aumenta.
+*   Si `Q` y `ΔT` son negativos, sale calor del cuerpo y su temperatura disminuye.
+
+**Nota Importante:** Es crucial recordar que `Q` representa una **transferencia** de energía. Un cuerpo no "contiene" calor; el calor es la energía que fluye debido a una diferencia de temperatura. No existe "la cantidad de calor de un cuerpo".
+
+### Capacidad Calorífica Molar
+
+A veces resulta más útil describir una cantidad de sustancia en términos del **número de moles (n)** en vez de su masa (m). La masa `m` y el número de moles `n` se relacionan a través de la **masa molar (M)**, que es la masa por mol:
+
+$$ m = nM $$
+
+Sustituyendo esta relación en la ecuación del calor específico (`Q = mcΔT`), obtenemos:
+$$ Q = (nM)c\Delta T $$
+
+El producto `Mc` se define como la **capacidad calorífica molar (C)**. Con esta notación, la ecuación se reescribe de una forma más sencilla:
+
+$$ Q = nC\Delta T $$
+
+La capacidad calorífica molar `C` se relaciona con el calor específico `c` mediante la fórmula:
+$$ C = Mc $$
+
+#### Capacidad Calorífica de los Gases (a Presión y a Volumen Constante)
+
+En el caso de los gases, la cantidad de calor necesaria para elevar la temperatura depende de las condiciones del proceso. Por ello, se definen dos capacidades caloríficas molares distintas:
+
+*   **Capacidad calorífica molar a volumen constante (`C_V`):** Si el volumen se mantiene constante, no se realiza trabajo (`W=0`) y todo el calor añadido (`Q`) se convierte en energía interna (`ΔU`).
+*   **Capacidad calorífica molar a presión constante (`C_P`):** Si la presión se mantiene constante, el sistema se expande al calentarse y realiza trabajo (`W > 0`). Por lo tanto, se necesita más calor para producir el mismo cambio de temperatura, ya que parte de la energía se destina a realizar trabajo.
+
+Por esta razón, para un gas, la capacidad calorífica molar a presión constante siempre es mayor que a volumen constante (`C_P > C_V`).
+
+### Calorimetría y Cambios de Fase
+
+Además de cambiar la temperatura, la transferencia de calor también puede provocar un **cambio de fase**, como la fusión del hielo o la ebullición del agua.
+
+#### Cambios de Fase y Calor Latente
+
+Una transición de una fase (sólido, líquido, gaseoso) a otra se denomina **cambio de fase**. Estos procesos ocurren a una temperatura y presión definidas y van acompañados de la absorción o emisión de calor.
+
+Un punto crucial es que, **durante un cambio de fase, la temperatura del sistema permanece constante**. Toda la energía térmica que se agrega o se quita se destina a cambiar la fase de la sustancia, no a cambiar su temperatura.
+
+La cantidad de calor `Q` requerida para cambiar la fase de una masa `m` de una sustancia es:
+$$ Q = \pm mL $$
+Donde `L` es una propiedad del material llamada **calor latente**.
+
+*   El signo es **positivo** cuando se agrega calor para pasar a una fase de mayor energía (fusión, vaporización).
+*   El signo es **negativo** cuando se quita calor para pasar a una fase de menor energía (congelación, condensación).
+
+#### Tipos de Calor Latente
+
+1.  **Calor Latente de Fusión (`L_f`):** Es el calor por unidad de masa necesario para pasar de la fase sólida a la líquida. Para el agua, `L_f ≈ 3.34 x 10⁵ J/kg`. Este es también el calor que se debe quitar para congelar el líquido.
+
+2.  **Calor Latente de Vaporización (`L_v`):** Es el calor por unidad de masa necesario para pasar de la fase líquida a la gaseosa. Para el agua, `L_v ≈ 2.256 x 10⁶ J/kg`. Este es también el calor que se cede durante la condensación.
+
+### Mecanismos de Transferencia de Calor
+
+Hemos estudiado cómo la energía se transfiere en forma de calor, pero no cómo ocurre dicha transferencia. Existen tres mecanismos fundamentales de transferencia de calor: **conducción**, **convección** y **radiación**.
+
+#### Conducción
+
+La conducción es la transferencia de calor a través de un material, donde la energía térmica se transmite de una molécula a otra sin que haya un desplazamiento de materia. El calor fluye desde las regiones de mayor temperatura hacia las de menor temperatura.
+
+A nivel atómico, los átomos en las regiones más calientes tienen mayor energía cinética y vibran con más intensidad. A través de colisiones con los átomos vecinos, transfieren esta energía, propagando el calor a través del material. En los metales, los electrones libres también participan en este proceso, lo que los convierte en excelentes conductores del calor.
+
+##### Corriente de Calor por Conducción
+
+La tasa de transferencia de calor, `dQ/dt`, se denomina **corriente de calor (H)**. Sus unidades son de energía por tiempo, es decir, potencia, por lo que en el SI se mide en **watts (W)**.
+
+Experimentalmente, se observa que la corriente de calor `H` a través de una varilla de material es:
+*   Proporcional al área de sección transversal `A`.
+*   Proporcional a la diferencia de temperatura `(T_H - T_C)` entre los extremos.
+*   Inversamente proporcional a la longitud de la varilla `L`.
+
+Combinando estas relaciones, obtenemos la **ley de la conducción de calor**:
+
+$$ H = \frac{dQ}{dt} = kA\frac{T_H - T_C}{L} $$
+
+La constante `k` es una propiedad del material llamada **conductividad térmica**.
+*   Los materiales con `k` grande son **buenos conductores** del calor (ej. metales).
+*   Los materiales con `k` pequeña son **malos conductores** o **aislantes** (ej. madera, aire).
+
+La cantidad `(T_H - T_C)/L` se conoce como **gradiente de temperatura**. La forma más general de la ley de conducción es:
+
+$$ H = -kA\frac{dT}{dx} $$
+
+El signo negativo indica que el calor siempre fluye en la dirección de temperatura decreciente.
+
+#### Resistencia Térmica (Valor R)
+
+En el campo del aislamiento de edificios, es común utilizar el concepto de **resistencia térmica (R)**, que se define como:
+
+$$ R = \frac{L}{k} $$
+
+Donde `L` es el espesor del material. Un material con un valor R alto es un buen aislante. Usando esta definición, la corriente de calor se puede expresar como:
+
+$$ H = A\frac{T_H - T_C}{R} $$
+
+#### Convección
+
+La convección es la transferencia de calor por el **movimiento de una masa de fluido** de una región del espacio a otra. El calor transportado por el fluido en movimiento se transfiere de una fuente caliente a una ubicación fría.
+
+Existen dos tipos principales de convección:
+
+1.  **Convección natural o libre:** El movimiento del fluido es causado por diferencias de densidad debidas a la expansión térmica. El fluido caliente, al ser menos denso, asciende, mientras que el fluido frío, más denso, desciende. Ejemplos típicos son el ascenso de aire caliente sobre un radiador, la circulación de agua en una olla al calentarse, y las corrientes oceánicas y atmosféricas.
+
+2.  **Convección forzada:** El movimiento del fluido es impulsado por un medio externo, como un ventilador o una bomba. Ejemplos de esto son los sistemas de calefacción de aire caliente, el sistema de enfriamiento de un motor y el flujo de sangre en el cuerpo humano, bombeada por el corazón.
+
+La transferencia de calor por convección es un proceso muy complejo y no se puede describir con una ecuación simple como la de la conducción. Sin embargo, experimentalmente se observa que la corriente de calor por convección:
+
+*   Es directamente proporcional al área superficial.
+*   Aumenta significativamente con la velocidad del fluido (la convección forzada es más eficiente que la natural). Esto explica el "factor de congelación" o sensación térmica: nos enfriamos más rápido en un día con viento que en un día de aire tranquilo a la misma temperatura.
+
+#### Radiación
+
+La radiación es la transferencia de calor por medio de **ondas electromagnéticas**, como la luz visible, el infrarrojo y la radiación ultravioleta. A diferencia de la conducción y la convección, la radiación **no requiere de un medio material** para ocurrir; puede transferir calor a través del vacío. Así es como sentimos el calor del Sol o de una chimenea.
+
+Todo cuerpo, a cualquier temperatura, emite energía en forma de radiación electromagnética.
+*   A temperaturas ordinarias (aprox. 20 °C), esta energía se transporta principalmente en ondas de infrarrojo.
+*   Al aumentar la temperatura, la intensidad de la radiación aumenta y la energía se emite en longitudes de onda cada vez más cortas. A unos 800 °C, un cuerpo emite suficiente radiación visible como para verse "al rojo vivo".
+
+La tasa de radiación de energía (corriente de calor `H`) de una superficie depende de su área `A`, de la naturaleza de la superficie y, fundamentalmente, de su temperatura absoluta `T`.
+
+##### Ley de Stefan-Boltzmann
+
+La relación que gobierna la energía radiada se conoce como la **ley de Stefan-Boltzmann**:
+
+$$ H = A e \sigma T^4 $$
+
+Los componentes de esta ley son:
+
+*   **`σ` (Constante de Stefan-Boltzmann):** Es una constante física fundamental.
+    $$ \sigma \approx 5.67 \times 10^{-8} \, \text{W/m}^2 \cdot \text{K}^4 $$
+*   **`T` (Temperatura absoluta):** La temperatura de la superficie radiante debe estar expresada en **Kelvin (K)**. La fuerte dependencia de `T⁴` significa que la tasa de radiación aumenta muy rápidamente con la temperatura.
+*   **`e` (Emisividad):** Es un número adimensional entre 0 y 1 que describe la efectividad de una superficie para emitir radiación.
+    *   `e = 1` para un **radiador ideal o cuerpo negro** (una superficie que absorbe toda la radiación que incide sobre ella y también es el mejor emisor posible).
+    *   `e = 0` para un reflector ideal.
+    *   Para objetos reales, la emisividad depende de la naturaleza de la superficie (generalmente es mayor para superficies oscuras y mate que para superficies claras y pulidas).
+
+### Radiación y Absorción Neta
+
+Si bien un cuerpo a una temperatura `T` está emitiendo radiación, su entorno, que se encuentra a una temperatura `T_s`, también lo está haciendo. Por lo tanto, el cuerpo no solo emite energía, sino que también **absorbe** parte de la radiación de su entorno.
+
+La tasa a la que un cuerpo absorbe energía de su entorno se rige por la misma ley de Stefan-Boltzmann, pero utilizando la temperatura del entorno `T_s`. La **corriente de calor neta (H_neta)** es la diferencia entre la tasa de energía que emite el cuerpo y la tasa de energía que absorbe:
+
+$$ H_{\text{neta}} = H_{\text{emitida}} - H_{\text{absorbida}} $$
+$$ H_{\text{neta}} = A e \sigma T^4 - A e \sigma T_s^4 $$
+
+Factorizando, obtenemos la ecuación para la transferencia neta de calor por radiación:
+
+$$ H_{\text{neta}} = A e \sigma (T^4 - T_s^4) $$
+
+Un valor positivo de `H_neta` implica una salida neta de calor del cuerpo hacia un entorno más frío (`T > T_s`).
+
+### Aplicaciones de la Radiación
+
+La transferencia de calor por radiación es fundamental en muchas aplicaciones, basándose en un principio clave: **un cuerpo que es un buen absorbedor de radiación también es un buen emisor.**
+
+*   **Cuerpo Negro:** Un radiador ideal, con una emisividad `e = 1`, es también un absorbedor ideal (absorbe toda la radiación que incide sobre él). Dicha superficie ideal se denomina **cuerpo negro**.
+*   **Reflector Ideal:** Por el contrario, un reflector ideal, que no absorbe radiación, es también un emisor muy poco eficaz (`e` cercano a 0).
+
+Esta propiedad es la base del funcionamiento de las **botellas de vacío (termos)**. Estos recipientes tienen una doble pared de vidrio con el espacio entre ellas evacuado para minimizar la transferencia de calor por conducción y convección. Las superficies internas están plateadas (son muy reflectantes y tienen baja emisividad) para minimizar la transferencia de calor por radiación, reflejando el calor emitido por el contenido de vuelta hacia adentro y el calor del exterior hacia afuera.
+
+---
+
 ## Termodinamica - 1ra ley
 
 ### Sistemas termodinamicos
